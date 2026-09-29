@@ -1,8 +1,15 @@
-/* ---------- Muzzle flash (hidden until the robot fires) ---------- */
-.robot__flash {
-    fill: var(--gold);
+/* ---------- Muzzle flash (hidden until the character fires) ---------- */
+.char__flash {
+    position: absolute;
+    left: var(--muzzle-x);
+    top: var(--muzzle-y);
+    width: 44px;
+    height: 44px;
+    margin: -22px 0 0 -22px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffffff 0 20%, var(--gold) 45%, transparent 70%);
     opacity: 0;
-    filter: drop-shadow(0 0 6px var(--gold));
+    pointer-events: none;
 }
 
 /* ---------- Targeting reticle that follows the mouse ---------- */

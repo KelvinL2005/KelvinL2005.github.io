@@ -48,7 +48,10 @@ Rules that apply to every phase:
 - [x] The nav badge shows the faction symbol and flips like a coin (`.insignia` in `css/components.css`).
 - [x] **Bumper on nav clicks:** the symbol spins in over speed lines, flips Autobot to Decepticon (or back), the page jumps, then the symbol flies out (`js/transition.js`).
 - [x] **Faction colour swap:** accents fade between Autobot red and Decepticon purple via `@property` variables (`css/base.css`).
-- [ ] Replace `assets/img/autobot.png` and `assets/img/decepticon.png` with the real artwork (square, transparent PNGs work best).
+- [x] Real Autobot/Decepticon insignias (black background cut out, squared).
+- [x] **G1 backdrop:** painted Ark crash-site scene fixed behind the page, crossfading to the dusk version for Decepticon.
+- [x] **Optimus:** detailed character art replaces the SVG robot. The whole figure tilts to aim, turns to face the cursor, floats and fires (`js/character.js`).
+- [ ] **Megatron:** swap in on the Decepticon side (waiting on PNG).
 
 ## Phase 4: Content and assets
 - [ ] Add project screenshots or GIFs (VisualOS, Pokemon Team Analyzer, Poker).

@@ -50,7 +50,8 @@ Rules that apply to every phase:
 - [x] **Faction colour swap:** accents fade between Autobot red and Decepticon purple via `@property` variables (`css/base.css`).
 - [x] Real Autobot/Decepticon insignias (black background cut out, squared).
 - [x] **G1 backdrop:** painted Ark crash-site scene fixed behind the page, crossfading to the dusk version for Decepticon.
-- [ ] **Optimus / Megatron:** replace the SVG robot with detailed character art that swaps with the faction (waiting on PNGs).
+- [x] **Optimus:** detailed character art replaces the SVG robot. The whole figure tilts to aim, turns to face the cursor, floats and fires (`js/character.js`).
+- [ ] **Megatron:** swap in on the Decepticon side (waiting on PNG).
 
 ## Phase 4: Content and assets
 - [ ] Add project screenshots or GIFs (VisualOS, Pokemon Team Analyzer, Poker).

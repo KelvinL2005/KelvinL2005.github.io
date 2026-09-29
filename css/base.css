@@ -44,7 +44,7 @@
     --gutter: clamp(1rem, 4vw, 2rem);
     --hud-h: 4rem;
 
-    /* UI accents use these. The robot keeps its own --red. */
+    /* UI accents use these, so one switch recolours the whole page */
     --faction: var(--red);
     --faction-dark: var(--red-dark);
     --faction-bright: var(--red-bright);

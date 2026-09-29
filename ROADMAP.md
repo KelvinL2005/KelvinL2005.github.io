@@ -44,6 +44,12 @@ Rules that apply to every phase:
 - [ ] Later: a small robot docked in a corner that keeps tracking after you scroll past the hero.
 - [ ] Later: replace the favicon with the new robot.
 
+## Phase 3b: Faction transitions (done)
+- [x] The nav badge shows the faction symbol and flips like a coin (`.insignia` in `css/components.css`).
+- [x] **Bumper on nav clicks:** the symbol spins in over speed lines, flips Autobot to Decepticon (or back), the page jumps, then the symbol flies out (`js/transition.js`).
+- [x] **Faction colour swap:** accents fade between Autobot red and Decepticon purple via `@property` variables (`css/base.css`).
+- [ ] Replace `assets/img/autobot.png` and `assets/img/decepticon.png` with the real artwork (square, transparent PNGs work best).
+
 ## Phase 4: Content and assets
 - [ ] Add project screenshots or GIFs (VisualOS, Pokemon Team Analyzer, Poker).
 - [ ] Take a photo or make an avatar for About.

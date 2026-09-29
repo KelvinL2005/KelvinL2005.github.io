@@ -1,3 +1,25 @@
+/* ---------- Faction colours ----------
+   Normally a CSS variable is just text, so the browser can't animate it and it
+   snaps from one value to the next. @property tells the browser it holds a
+   colour, which lets `transition` fade smoothly between red and purple. */
+@property --faction {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #d3161f;
+}
+
+@property --faction-dark {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #a10f16;
+}
+
+@property --faction-bright {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #ff3b3b;
+}
+
 /* ---------- G1 Palette ---------- */
 :root {
     --bg: #0b0f1a;
@@ -21,6 +43,19 @@
     --container: 1100px;
     --gutter: clamp(1rem, 4vw, 2rem);
     --hud-h: 4rem;
+
+    /* UI accents use these. The robot keeps its own --red. */
+    --faction: var(--red);
+    --faction-dark: var(--red-dark);
+    --faction-bright: var(--red-bright);
+    transition: --faction 0.6s, --faction-dark 0.6s, --faction-bright 0.6s;
+}
+
+/* Set by js/transition.js on <html> when the Decepticon symbol is showing */
+:root[data-faction="decepticon"] {
+    --faction: #7a2fc0;
+    --faction-dark: #4b1978;
+    --faction-bright: #b070ff;
 }
 
 *,
@@ -39,7 +74,7 @@ body {
     background:
         repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0 2px, transparent 2px 14px),
         radial-gradient(circle at 10% 0%, rgba(31, 87, 201, 0.22), transparent 45%),
-        radial-gradient(circle at 95% 8%, rgba(211, 22, 31, 0.16), transparent 40%),
+        radial-gradient(circle at 95% 8%, color-mix(in srgb, var(--faction) 16%, transparent), transparent 40%),
         var(--bg);
     background-attachment: fixed;
     color: var(--text);
@@ -114,7 +149,7 @@ a:hover {
 /* Red | gold | blue stripe */
 .divider {
     height: 4px;
-    background: linear-gradient(90deg, var(--red) 0 33%, var(--gold) 33% 40%, var(--blue) 40% 100%);
+    background: linear-gradient(90deg, var(--faction) 0 33%, var(--gold) 33% 40%, var(--blue) 40% 100%);
 }
 
 /* Respect reduced-motion settings */

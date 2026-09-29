@@ -29,6 +29,7 @@
     <script src="js/main.js" defer></script>
     <script src="js/cursor.js" defer></script>
     <script src="js/robot.js" defer></script>
+    <script src="js/transition.js" defer></script>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -36,7 +37,13 @@
     <!-- ---------- HUD nav ---------- -->
     <header class="hud">
         <div class="hud__inner">
-            <a class="hud__brand" href="#top" aria-label="Back to top">KL</a>
+            <!-- Faction symbol. Replace the PNGs in assets/img/ to change the artwork. -->
+            <a class="hud__brand" href="#top" aria-label="Back to top">
+                <span class="insignia">
+                    <img class="insignia__face insignia__face--autobot" src="assets/img/autobot.png" alt="" width="64" height="64">
+                    <img class="insignia__face insignia__face--decepticon" src="assets/img/decepticon.png" alt="" width="64" height="64">
+                </span>
+            </a>
 
             <button class="hud__toggle" type="button" aria-expanded="false" aria-controls="hud-menu">
                 <span class="hud__toggle-bar"></span>

@@ -13,21 +13,21 @@ Rules that apply to every phase:
 ---
 
 ## Phase 0: Cleanup and structure
-- [ ] Replace the empty `images` file with an `assets/` folder (`assets/img/`, `assets/icons/`).
-- [ ] Add `resume.pdf`, or remove the link until the PDF exists.
-- [ ] Split the code into `css/` (`base.css`, `components.css`, `animations.css`) and `js/` (`main.js`, `cursor.js`, `intro.js`, `scroll.js`).
-- [ ] Remove the "THIS SITE IS STILL IN PROGRESS" heading, or turn it into a styled banner.
-- [ ] Add meta and Open Graph tags (description, preview image) and preload the Russo One font.
+- [x] Replace the empty `images` file with an `assets/` folder (`assets/img/`, `assets/icons/`).
+- [x] Add `resume.pdf`, or remove the link until the PDF exists. (Placeholder button for now)
+- [x] Split the code into `css/` (`base.css`, `components.css`, `animations.css`) and `js/` (`main.js`, `cursor.js`, `intro.js`, `scroll.js`).
+- [x] Remove the "THIS SITE IS STILL IN PROGRESS" heading, or turn it into a styled banner.
+- [x] Add meta and Open Graph tags (description, preview image) and preload the Russo One font.
 
 ## Phase 1: Layout and static design (no animation yet)
-- [ ] **Hero:** full-height chrome name, the red role tag, an SVG Autobot-style insignia (original artwork, not the trademarked logo) and a "scroll" indicator.
-- [ ] **Nav:** a fixed HUD bar with angled buttons and an active-section highlight. On mobile it becomes a hamburger menu.
-- [ ] **About:** a "bio panel" styled like a HUD readout, with room for a photo.
-- [ ] **Projects:** a grid of cut-corner cards with tech-tag chips, GitHub and demo buttons, and a screenshot slot.
-- [ ] **Skills:** grouped "power level" bars or chip clusters (Languages / Frameworks / Tools).
-- [ ] **Contact:** a large call to action plus icon links (Email, LinkedIn, GitHub).
-- [ ] **Footer:** the red|gold|blue divider.
-- [ ] Make it responsive at 360px, 768px and 1280px or wider.
+- [x] **Hero:** full-height chrome name, the red role tag, an SVG Autobot-style insignia (original artwork, not the trademarked logo) and a "scroll" indicator.
+- [x] **Nav:** a fixed HUD bar with angled buttons and an active-section highlight. On mobile it becomes a hamburger menu.
+- [x] **About:** a "bio panel" styled like a HUD readout, with room for a photo.
+- [x] **Projects:** a grid of cut-corner cards with tech-tag chips, GitHub and demo buttons, and a screenshot slot.
+- [x] **Skills:** grouped "power level" bars or chip clusters (Languages / Frameworks / Tools).
+- [x] **Contact:** a large call to action plus icon links (Email, LinkedIn, GitHub).
+- [x] **Footer:** the red|gold|blue divider.
+- [x] Make it responsive at 360px, 768px and 1280px or wider.
 
 ## Phase 2: Core animations (GSAP)
 - [ ] **Intro / "transform" sequence** (about 1.5s, runs once per session): angled panels slide apart, the insignia assembles, then the chrome name wipes in with a sheen.

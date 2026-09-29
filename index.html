@@ -2,72 +2,201 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="optimus_primeFavicon.png">
     <title>Kelvin Liu | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet"></head>
+    <meta name="description" content="Kelvin Liu, Computer Science co-op student at York University (Lassonde). Projects in React, Next.js, TypeScript and Java.">
+    <meta name="theme-color" content="#0b0f1a">
+
+    <meta property="og:title" content="Kelvin Liu | Portfolio">
+    <meta property="og:description" content="Computer Science co-op student at York University. Projects in React, Next.js, TypeScript and Java.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kelvinl2005.github.io/">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/optimus_primeFavicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <!-- Lets CSS know JS is available so it can enhance the nav, and later the animations -->
+    <script>document.documentElement.classList.add("js");</script>
+    <script src="js/main.js" defer></script>
+</head>
 <body>
-    <h1>Kelvin Liu</h1>
-    <h2>Computer Science Co-op Student | York University, Lassonde</h2>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <nav class="sidebar">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <!-- ---------- HUD nav ---------- -->
+    <header class="hud">
+        <div class="hud__inner">
+            <a class="hud__brand" href="#top" aria-label="Back to top">KL</a>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I'm Kelvin, a third-year Computer Science student at York University. My interest in tech started with Counter-Strike 1.6, and I've been hooked on games ever since. In high school that curiosity led me to build my first PC, and working with hardware made me want to understand the software side too. Now I build projects in Java, React and Next.js, and I'm exploring which area of tech fits me best.</p>
-            <p><a href="resume.pdf" target="_blank">Download my resume (PDF)</a></p>
+            <button class="hud__toggle" type="button" aria-expanded="false" aria-controls="hud-menu">
+                <span class="hud__toggle-bar"></span>
+                <span class="visually-hidden">Menu</span>
+            </button>
+
+            <nav id="hud-menu" class="hud__menu" aria-label="Main">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ---------- Hero ---------- -->
+    <section id="top" class="hero">
+        <div class="hero__content">
+            <p class="hero__eyebrow">// Systems online</p>
+            <h1 class="chrome-title">Kelvin Liu</h1>
+            <p class="tag tag--red">Computer Science Co-op Student &middot; York University, Lassonde</p>
+            <p class="hero__lead">I build web apps with React, Next.js and TypeScript, and I like making interfaces that feel alive.</p>
+            <div class="hero__actions">
+                <a class="btn btn--red" href="#projects">View projects</a>
+                <a class="btn btn--ghost" href="#contact">Get in touch</a>
+            </div>
+        </div>
+
+        <!-- Original emblem artwork (placeholder for the hero visual) -->
+        <div class="hero__emblem" aria-hidden="true">
+            <svg viewBox="0 0 200 220" class="emblem">
+                <defs>
+                    <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#ffffff"/>
+                        <stop offset=".46" stop-color="#b9c2d3"/>
+                        <stop offset=".5" stop-color="#5c667a"/>
+                        <stop offset=".54" stop-color="#b9c2d3"/>
+                        <stop offset="1" stop-color="#ffffff"/>
+                    </linearGradient>
+                </defs>
+                <path class="emblem__shield" d="M100 6 L190 40 L176 150 L100 214 L24 150 L10 40 Z"/>
+                <path class="emblem__inner" d="M100 26 L170 52 L158 140 L100 190 L42 140 L30 52 Z"/>
+                <path class="emblem__red" d="M58 70 L92 84 L92 130 L64 118 Z"/>
+                <path class="emblem__blue" d="M142 70 L108 84 L108 130 L136 118 Z"/>
+                <path class="emblem__gold" d="M100 140 L118 156 L100 176 L82 156 Z"/>
+            </svg>
+        </div>
+
+        <a class="hero__scroll" href="#about" aria-label="Scroll to About">
+            <span>Scroll</span>
+            <span class="hero__scroll-line"></span>
+        </a>
+    </section>
+
+    <main id="main">
+        <!-- ---------- About ---------- -->
+        <section id="about" class="section">
+            <h2 class="section__title">About Me</h2>
+            <div class="about panel">
+                <!-- Placeholder: swap for <img src="assets/img/kelvin.jpg" alt="Kelvin Liu"> -->
+                <div class="about__photo placeholder" role="img" aria-label="Photo coming soon">
+                    <span>Photo</span>
+                </div>
+                <div class="about__text">
+                    <p class="readout"><span>Designation</span> Kelvin Liu</p>
+                    <p class="readout"><span>Status</span> 3rd-year CS &middot; Seeking co-op</p>
+                    <p>I'm Kelvin, a third-year Computer Science student at York University. My interest in tech started with Counter-Strike 1.6, and I've been hooked on games ever since. In high school that curiosity led me to build my first PC, and working with hardware made me want to understand the software side too. Now I build projects in Java, React and Next.js, and I'm exploring which area of tech fits me best.</p>
+                    <!-- Placeholder: enable once resume.pdf is added to the repo root -->
+                    <a class="btn btn--ghost is-disabled" aria-disabled="true">Resume coming soon</a>
+                </div>
+            </div>
         </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>
-                    <strong>Pokemon Team Analyzer</strong><br>
-                    <em>Next.js, TypeScript, TailwindCSS | In progress</em><br>
-                    A web app for building a Pokemon team and getting it analyzed. It has a Pokédex-terminal interface, autocomplete search with keyboard navigation, and loading skeletons. An AI analyzer calls an LLM API and returns a grade, archetype, strengths, weaknesses and suggestions for the team. Next up: JWT authentication and input validation.<br>
-                    <a href="https://github.com/KelvinL2005/pokemon-team-analyzer" target="_blank">View on GitHub</a>
-                </li>
-                <li>
-                    <strong>VisualOS</strong><br>
-                    <em>React, TypeScript, CSS | May to Jul 2026</em><br>
-                    An interactive visualizer that shows how algorithms change data structures step by step. It's built from modular React components with animated transitions and works on desktop and mobile.<br>
-                    <a href="https://github.com/KelvinL2005/visualos" target="_blank">View on GitHub</a>
-                </li>
-                <li>
-                    <strong>Three Card Poker Variation</strong><br>
-                    <em>Java, Swing | May to Jun 2023</em><br>
-                    A card game with a full gameplay loop from betting to hand resolution. The game logic, models and UI are kept in separate components.
-                </li>
-            </ul>
+        <!-- ---------- Projects ---------- -->
+        <section id="projects" class="section">
+            <h2 class="section__title">Projects</h2>
+            <div class="projects">
+                <article class="card">
+                    <!-- Placeholder: swap for <img src="assets/img/pokemon-team-analyzer.png" alt="..."> -->
+                    <div class="card__media placeholder" role="img" aria-label="Screenshot coming soon"><span>Screenshot</span></div>
+                    <div class="card__body">
+                        <p class="card__meta">In progress</p>
+                        <h3 class="card__title">Pokemon Team Analyzer</h3>
+                        <p>A web app for building a Pokemon team and getting it analyzed. It has a Pokédex-terminal interface, autocomplete search with keyboard navigation, and loading skeletons. An AI analyzer calls an LLM API and returns a grade, archetype, strengths, weaknesses and suggestions for the team. Next up: JWT authentication and input validation.</p>
+                        <ul class="chips">
+                            <li>Next.js</li><li>TypeScript</li><li>TailwindCSS</li>
+                        </ul>
+                        <div class="card__links">
+                            <a class="btn btn--small" href="https://github.com/KelvinL2005/pokemon-team-analyzer" target="_blank" rel="noopener">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card__media placeholder" role="img" aria-label="Screenshot coming soon"><span>Screenshot</span></div>
+                    <div class="card__body">
+                        <p class="card__meta">May to Jul 2026</p>
+                        <h3 class="card__title">VisualOS</h3>
+                        <p>An interactive visualizer that shows how algorithms change data structures step by step. It's built from modular React components with animated transitions and works on desktop and mobile.</p>
+                        <ul class="chips">
+                            <li>React</li><li>TypeScript</li><li>CSS</li>
+                        </ul>
+                        <div class="card__links">
+                            <a class="btn btn--small" href="https://github.com/KelvinL2005/visualos" target="_blank" rel="noopener">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card__media placeholder" role="img" aria-label="Screenshot coming soon"><span>Screenshot</span></div>
+                    <div class="card__body">
+                        <p class="card__meta">May to Jun 2023</p>
+                        <h3 class="card__title">Three Card Poker Variation</h3>
+                        <p>A card game with a full gameplay loop from betting to hand resolution. The game logic, models and UI are kept in separate components.</p>
+                        <ul class="chips">
+                            <li>Java</li><li>Swing</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <p><strong>Languages:</strong> Java, Python, SQL, JavaScript, TypeScript, C++, C, HTML/CSS</p>
-            <p><strong>Tools:</strong> React, Next.js, Node.js, TailwindCSS, Git, GitHub, UNIX/Linux</p>
+        <!-- ---------- Skills ---------- -->
+        <section id="skills" class="section">
+            <h2 class="section__title">Skills</h2>
+            <div class="skills">
+                <div class="panel skill-group">
+                    <h3>Languages</h3>
+                    <ul class="chips chips--lg">
+                        <li>Java</li><li>Python</li><li>SQL</li><li>JavaScript</li><li>TypeScript</li><li>C++</li><li>C</li><li>HTML/CSS</li>
+                    </ul>
+                </div>
+                <div class="panel skill-group">
+                    <h3>Frameworks</h3>
+                    <ul class="chips chips--lg">
+                        <li>React</li><li>Next.js</li><li>Node.js</li><li>TailwindCSS</li>
+                    </ul>
+                </div>
+                <div class="panel skill-group">
+                    <h3>Tools</h3>
+                    <ul class="chips chips--lg">
+                        <li>Git</li><li>GitHub</li><li>UNIX/Linux</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: kliu05@my.yorku.ca</p>
-            <p><a href="https://www.linkedin.com/in/kelvin-l-a22079233" target="_blank">LinkedIn</a></p>           
-            <p><a href="https://github.com/KelvinL2005" target="_blank">GitHub</a></p>
+        <!-- ---------- Contact ---------- -->
+        <section id="contact" class="section">
+            <h2 class="section__title">Contact</h2>
+            <div class="contact panel">
+                <p class="contact__lead">Open to co-op opportunities. Let's talk.</p>
+                <a class="btn btn--red btn--large" href="mailto:kliu05@my.yorku.ca">kliu05@my.yorku.ca</a>
+                <ul class="contact__links">
+                    <li><a href="https://www.linkedin.com/in/kelvin-l-a22079233" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="https://github.com/KelvinL2005" target="_blank" rel="noopener">GitHub</a></li>
+                </ul>
+            </div>
         </section>
     </main>
 
-        <h1>THIS SITE IS STILL IN PROGRESS</h1>
-    <hr>
-    <footer>
+    <footer class="footer">
+        <div class="divider"></div>
         <p>&copy; 2026 Kelvin Liu</p>
     </footer>
 </body>

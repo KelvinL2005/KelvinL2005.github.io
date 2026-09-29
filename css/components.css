@@ -191,30 +191,58 @@
     margin-top: 1.5rem;
 }
 
-.hero__emblem {
+.hero__robot {
     justify-self: center;
-    width: min(100%, 340px);
+    width: min(100%, 440px);
     filter: drop-shadow(0 10px 30px rgba(31, 87, 201, 0.35));
 }
 
-.emblem__shield {
-    fill: url(#chrome);
+/* Let the arm swing past the edge of the drawing without being cut off */
+.robot {
+    overflow: visible;
 }
 
-.emblem__inner {
-    fill: var(--panel);
+.c-chrome {
+    fill: var(--chrome-mid);
 }
 
-.emblem__red {
+.c-dark {
+    fill: #2a3040;
+}
+
+.c-red {
     fill: var(--red);
 }
 
-.emblem__blue {
+.c-red-dark {
+    fill: var(--red-dark);
+}
+
+.c-blue {
     fill: var(--blue);
 }
 
-.emblem__gold {
+.c-blue-dark {
+    fill: var(--blue-dark);
+}
+
+.c-gold {
     fill: var(--gold);
+}
+
+.c-glass {
+    fill: #5fb4ff;
+    fill-opacity: 0.55;
+}
+
+.c-glare {
+    fill: #ffffff;
+    fill-opacity: 0.45;
+}
+
+.c-eye {
+    fill: var(--blue-bright);
+    filter: drop-shadow(0 0 4px var(--blue-bright));
 }
 
 .hero__scroll {
@@ -538,9 +566,9 @@
         text-align: left;
     }
 
-    .hero__emblem {
+    .hero__robot {
         grid-row: 1;
-        width: min(55%, 220px);
+        width: min(75%, 300px);
     }
 
     .about {

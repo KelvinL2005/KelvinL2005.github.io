@@ -36,13 +36,13 @@ Rules that apply to every phase:
 - [ ] **Skill bars** fill up when they scroll into view.
 - [ ] **Nav:** a sliding red indicator follows the active section.
 
-## Phase 3: Cursor effect ⭐
-Pick one to build first. The others can be added later as toggles.
-1. **Targeting reticle (recommended):** a HUD crosshair ring follows the cursor with easing and lags slightly behind. Over links and cards it locks on: the ring snaps to the element's bounds and turns red.
-2. **Energon trail:** a short trail of glowing blue/gold particles drawn on a `<canvas>`, fading out over about 300ms.
-3. **Magnetic elements:** buttons and cards lean toward the cursor, and cards get a 3D tilt with a glare.
-
-How it's built: `js/cursor.js` uses `gsap.quickTo` for smooth following, a single `pointermove` listener and `requestAnimationFrame`. The system cursor stays visible so the page remains usable.
+## Phase 3: Cursor effect ⭐ (done)
+- [x] **Aiming robot:** an original SVG mech in the hero turns to face the cursor and aims its blaster at it (`js/robot.js`).
+- [x] **Fire on click:** recoil, a muzzle flash, and a bolt from the barrel to the click point with an impact ring.
+- [x] **Sentry mode:** after 4s without mouse movement (and always on touch screens), it sweeps its blaster. On touch, tapping makes it aim and fire.
+- [x] **Targeting reticle:** it trails the mouse and locks on (turns red, rotates) over links, buttons and cards (`js/cursor.js`).
+- [ ] Later: a small robot docked in a corner that keeps tracking after you scroll past the hero.
+- [ ] Later: replace the favicon with the new robot.
 
 ## Phase 4: Content and assets
 - [ ] Add project screenshots or GIFs (VisualOS, Pokemon Team Analyzer, Poker).

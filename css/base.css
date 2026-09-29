@@ -71,16 +71,52 @@ html {
 
 body {
     margin: 0;
-    background:
-        repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0 2px, transparent 2px 14px),
-        radial-gradient(circle at 10% 0%, rgba(31, 87, 201, 0.22), transparent 45%),
-        radial-gradient(circle at 95% 8%, color-mix(in srgb, var(--faction) 16%, transparent), transparent 40%),
-        var(--bg);
-    background-attachment: fixed;
+    background: var(--bg);
     color: var(--text);
     font-family: var(--font-body);
     line-height: 1.65;
     overflow-x: hidden;
+}
+
+/* ---------- G1 backdrop ----------
+   A fixed layer instead of `background-attachment: fixed`, which mobile Safari
+   ignores and which forces a full repaint on every scroll elsewhere. */
+.backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+.backdrop__layer {
+    position: absolute;
+    inset: 0;
+    background-position: 30% center;
+    background-size: cover;
+    transition: opacity 0.8s;
+}
+
+.backdrop__layer--autobot {
+    background-image: url("../assets/img/backdrop-autobot.webp");
+}
+
+.backdrop__layer--decepticon {
+    background-image: url("../assets/img/backdrop-decepticon.webp");
+    background-position: left center;
+    opacity: 0;
+}
+
+[data-faction="decepticon"] .backdrop__layer--decepticon {
+    opacity: 1;
+}
+
+/* Darken the art so text stays readable: heaviest on the left, where the hero text is */
+.backdrop::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(11, 15, 26, 0.88) 0%, rgba(11, 15, 26, 0.55) 55%, rgba(11, 15, 26, 0.3) 100%),
+        linear-gradient(transparent 60%, rgba(11, 15, 26, 0.6));
 }
 
 img,

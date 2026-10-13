@@ -16,7 +16,9 @@ Rules that apply everywhere:
 - [x] Layout: fixed nav with a mobile menu, hero, About, Journey, Projects, Skills, Contact.
 - [x] Content from the 2026 résumé: education, experience, project details, skills and coursework.
 - [x] **Journey timeline:** Counter-Strike 1.6 → first PC → Sansotei → first Java program → York Lassonde → web projects → next co-op.
-- [x] Projects as short case studies (summary, key points, stack, code link).
+- [x] Projects as short case studies: what it is, "The spark" (why I built it), key points, stack, code link.
+- [x] Horror Cooking Game (Oct 2025 hackathon, Godot) added to Projects and the Journey.
+- [x] "Beyond the Code" hobbies section that explains the theme.
 - [x] Hero: availability badge (Winter 2028 co-op), clear role line, contact links.
 - [x] Optimus in the hero floats and turns to face the cursor (`js/character.js`).
 - [x] Animations: staggered hero intro, sections revealed on scroll, and a timeline line that draws as you scroll (`js/reveal.js`).
@@ -26,6 +28,7 @@ Rules that apply everywhere:
 ## Next
 - [ ] Project screenshots or short GIFs for Pokemon Team Analyzer and VisualOS.
 - [ ] Live demo links once the projects are deployed.
+- [ ] itch.io link and real title for the horror game, plus its spark.
 - [ ] Social preview image (`og:image`) and a new favicon.
 - [ ] Shrink `assets/img/autobot.png` (245 KB).
 - [ ] Lighthouse pass: aim for 90+ on performance and accessibility.

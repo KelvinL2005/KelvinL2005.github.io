@@ -533,11 +533,6 @@
     transform: translateY(-4px);
 }
 
-/* The smaller, older project spans the full width under the two featured ones */
-.card:not(.card--featured) {
-    grid-column: 1 / -1;
-}
-
 .card__head {
     display: flex;
     flex-wrap: wrap;
@@ -571,9 +566,14 @@
     background: var(--gold);
 }
 
+.status--award {
+    color: #ffffff;
+    background: var(--red);
+}
+
 /* The personal "why I built it" story at the top of a project card */
 .card__spark {
-    margin: 0.5rem 0 1.1rem;
+    margin: 0 0 1.1rem;
     padding: 0.8rem 1rem;
     background: rgba(255, 194, 26, 0.07);
     border-left: 3px solid var(--gold);
@@ -595,8 +595,10 @@
     color: var(--gold);
 }
 
+/* One-line "what it is", read first when skimming */
 .card__summary {
     font-size: 1.02rem;
+    font-weight: 600;
     color: #ffffff;
 }
 
@@ -663,6 +665,34 @@
     margin: 0;
 }
 
+/* ---------- Beyond the Code ---------- */
+.hobbies {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+}
+
+.hobby__title {
+    margin: 0 0 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.hobby__title::before {
+    content: "";
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-right: 0.6rem;
+    background: var(--red);
+    transform: rotate(45deg) translateY(-2px);
+}
+
+.hobby p {
+    margin: 0;
+}
+
 /* ---------- Contact ---------- */
 .contact {
     text-align: center;
@@ -717,7 +747,8 @@
 
     .about,
     .projects,
-    .skills {
+    .skills,
+    .hobbies {
         grid-template-columns: 1fr;
     }
 }

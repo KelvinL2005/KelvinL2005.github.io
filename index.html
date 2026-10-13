@@ -152,6 +152,11 @@
                     <p>Started a BSc Honours in Computer Science (Co-op) at the Lassonde School of Engineering, with coursework in data structures, advanced OOP, databases, computer organization and probability.</p>
                 </li>
                 <li class="timeline__item" data-reveal>
+                    <p class="timeline__when">Oct 2025</p>
+                    <h3 class="timeline__title">Shipping a game in 7 days</h3>
+                    <p>Joined a hackathon with a team of four, learned Godot from scratch in a day, and shipped a horror-cooking game that placed in the top 30% of 1,000+ submissions. It was my first taste of building software as a team under a deadline.</p>
+                </li>
+                <li class="timeline__item" data-reveal>
                     <p class="timeline__when">May 2026 &ndash; Present</p>
                     <h3 class="timeline__title">Building for the web</h3>
                     <p>Shipped VisualOS, an algorithm visualizer in React and TypeScript, and started Pokemon Team Analyzer, my first full-stack app with a Node/Express backend and an LLM integration.</p>
@@ -165,19 +170,20 @@
         </section>
 
         <!-- ---------- Projects ---------- -->
+        <!-- Each card: title, what it is (summary), why I built it (spark), how (points) -->
         <section id="projects" class="section">
             <h2 class="section__title" data-reveal>Projects</h2>
             <div class="projects">
-                <article class="card card--featured" data-reveal>
+                <article class="card" data-reveal>
                     <div class="card__head">
                         <h3 class="card__title">Pokemon Team Analyzer</h3>
                         <p class="card__meta"><span class="status">In progress</span> May 2026 &ndash; Present</p>
                     </div>
+                    <p class="card__summary">A full-stack team builder that finds a team's weaknesses and suggests fixes.</p>
                     <blockquote class="card__spark">
                         <p class="card__spark-label">The spark</p>
                         <p>I've been a Pokemon fan for as long as I can remember, and every playthrough came down to the same puzzle: six party slots, hundreds of choices, and one bad type matchup could sink the whole team. I wanted a tool that would spot those weak points before an opponent did, so I started building one that maps out a team's type coverage and uses AI to suggest how to make it stronger.</p>
                     </blockquote>
-                    <p class="card__summary">A full-stack app that analyzes a Pokemon team's composition and type coverage.</p>
                     <ul class="card__points">
                         <li>React and TypeScript frontend that pulls structured data from the PokeAPI and surfaces team composition and type coverage.</li>
                         <li>Node and Express backend that validates and transforms data before it reaches the client, with a relational schema planned for user accounts and saved teams.</li>
@@ -191,16 +197,16 @@
                     </div>
                 </article>
 
-                <article class="card card--featured" data-reveal>
+                <article class="card" data-reveal>
                     <div class="card__head">
                         <h3 class="card__title">VisualOS</h3>
                         <p class="card__meta">May &ndash; Jul 2026</p>
                     </div>
+                    <p class="card__summary">An interactive, step-by-step visualizer for algorithms and data structures.</p>
                     <blockquote class="card__spark">
                         <p class="card__spark-label">The spark</p>
                         <p>I've always been a visual learner, and data structures only really clicked for me once I could picture them. I wanted to see the algorithms from my classes in motion, one step at a time. VisualOS became my way to learn by building: to animate each data structure I first had to understand it inside out, and the finished tool lets me explore new algorithms as I go.</p>
                     </blockquote>
-                    <p class="card__summary">An interactive visualizer that shows how algorithms change data structures, step by step.</p>
                     <ul class="card__points">
                         <li>Modular React and TypeScript component system that renders algorithm state changes in real time across multiple data structures.</li>
                         <li>Animated state transitions and responsive interactions built with React hooks, running smoothly on desktop and mobile.</li>
@@ -216,14 +222,30 @@
 
                 <article class="card" data-reveal>
                     <div class="card__head">
+                        <h3 class="card__title">Horror Cooking Game</h3>
+                        <p class="card__meta"><span class="status status--award">Top 30%</span> Oct 2025</p>
+                    </div>
+                    <p class="card__summary">A horror-cooking game built by a team of four in a 7-day hackathon, published on itch.io.</p>
+                    <ul class="card__points">
+                        <li>Shipped a fully playable game in 7 days, placing in the top 30% of 1,000+ hackathon submissions.</li>
+                        <li>Learned GDScript and Godot Engine from scratch in the first 24 hours by working through 5+ tutorials, then built the game in the remaining six days.</li>
+                        <li>Coordinated the team's feature pipeline and set up a shared Git workflow (feature branches and merge reviews), which meant zero integration bugs at submission.</li>
+                    </ul>
+                    <ul class="chips" aria-label="Tech stack">
+                        <li>Godot Engine</li><li>GDScript</li><li>Git</li>
+                    </ul>
+                </article>
+
+                <article class="card" data-reveal>
+                    <div class="card__head">
                         <h3 class="card__title">Three Card Poker Variation</h3>
                         <p class="card__meta">May &ndash; Jun 2023</p>
                     </div>
+                    <p class="card__summary">A Java card game with a full gameplay loop, from betting to hand resolution.</p>
                     <blockquote class="card__spark">
                         <p class="card__spark-label">The spark</p>
                         <p>I built this in high school while learning Java, to show my computer science class how each core OOP concept could come together in a game everyone knows. Poker sounds simple on paper, but programming it is full of edge cases, like hands where the same cards could count as more than one ranking. Working through them taught me that the real challenge in programming isn't the obvious path, it's everything around it.</p>
                     </blockquote>
-                    <p class="card__summary">A Java card game with a complete gameplay loop, from betting to hand resolution.</p>
                     <ul class="card__points">
                         <li>Hand evaluation for all 10 poker rankings using an enum-based ranking system, checked in priority order so a straight flush is never misread as a straight or a flush.</li>
                         <li>Game logic, models and the Swing UI kept as independent components.</li>
@@ -242,7 +264,7 @@
                 <div class="panel skill-group" data-reveal>
                     <h3>Languages</h3>
                     <ul class="chips chips--lg">
-                        <li>Java</li><li>Python</li><li>SQL</li><li>JavaScript</li><li>TypeScript</li><li>C++</li><li>C</li><li>HTML/CSS</li>
+                        <li>Java</li><li>Python</li><li>SQL</li><li>JavaScript</li><li>TypeScript</li><li>C++</li><li>C</li><li>GDScript</li><li>HTML/CSS</li>
                     </ul>
                 </div>
                 <div class="panel skill-group" data-reveal>
@@ -262,6 +284,30 @@
                     <ul class="chips chips--lg">
                         <li>Data Structures</li><li>Advanced OOP</li><li>Databases (SQL)</li><li>Software Tools</li><li>Computer Organization</li><li>Probability</li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------- Beyond the Code ---------- -->
+        <section id="beyond" class="section">
+            <h2 class="section__title" data-reveal>Beyond the Code</h2>
+            <p class="section__intro" data-reveal>The interests behind my projects, and behind the look of this site.</p>
+            <div class="hobbies">
+                <div class="panel hobby" data-reveal>
+                    <h3 class="hobby__title">G1 Transformers</h3>
+                    <p>I'm a fan of the original 1980s Transformers. That's why this site has the crashed Ark in the background, Optimus Prime at the top of the page and an Autobot logo in the nav.</p>
+                </div>
+                <div class="panel hobby" data-reveal>
+                    <h3 class="hobby__title">Pokemon</h3>
+                    <p>I've played the games for as long as I can remember. Chasing the perfect six-member team is what led to Pokemon Team Analyzer.</p>
+                </div>
+                <div class="panel hobby" data-reveal>
+                    <h3 class="hobby__title">Gaming &amp; game dev</h3>
+                    <p>It started with Counter-Strike 1.6. Now I make games too: my team's horror-cooking game placed in the top 30% of a 1,000+ entry hackathon.</p>
+                </div>
+                <div class="panel hobby" data-reveal>
+                    <h3 class="hobby__title">PC building</h3>
+                    <p>Building my first PC in high school is what pulled me from hardware into software, and it's still how I like to learn: take it apart and see how it works.</p>
                 </div>
             </div>
         </section>

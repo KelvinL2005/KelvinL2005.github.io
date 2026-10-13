@@ -43,3 +43,7 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach((section) => observer.observe(section));
+
+// Watch the hero too: no nav link points at it, so scrolling back up clears the highlight
+const hero = document.getElementById("top");
+if (hero) observer.observe(hero);

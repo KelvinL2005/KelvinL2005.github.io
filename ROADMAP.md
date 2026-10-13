@@ -1,7 +1,7 @@
 # Portfolio Roadmap
 
 **Direction:** a professional developer portfolio that tells the story of how I got into software, framed in a G1 Transformers style (chrome name, red/blue/gold palette, angled panels, the Ark backdrop).
-**Rule:** personal touches stay only when they're part of the story. Content comes first. The theme lives in the frame: nav, hero, section titles and accents.
+**Rule:** personal touches stay only when they're part of the story. Content comes first. The theme lives in a few signature places: the chrome name, the hero backdrop, Optimus, the Autobot logo and the Transformers story.
 **Stack:** plain HTML/CSS/JS with [GSAP](https://gsap.com/) + ScrollTrigger from a CDN. There's no build step, so GitHub Pages serves the repo as-is.
 
 Rules that apply everywhere:
@@ -22,7 +22,8 @@ Rules that apply everywhere:
 - [x] Hero: availability badge (Winter 2028 co-op), clear role line, contact links.
 - [x] Optimus in the hero floats and turns to face the cursor (`js/character.js`).
 - [x] Animations: staggered hero intro, sections revealed on scroll, and a timeline line that draws as you scroll (`js/reveal.js`).
-- [x] Typography: Russo One for the name and section titles, Inter for everything else.
+- [x] Typography: Russo One (chrome) for the name only, Inter for everything else.
+- [x] Minimal visual pass: Ark backdrop behind the hero only, plain headings with a red bar, rounded cards with thin borders, red as the single accent.
 - [x] Removed the Decepticon faction swap, transition bumper, reticle and blaster fire.
 
 ## Next

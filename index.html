@@ -33,9 +33,6 @@
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Painted G1 backdrop, fixed behind the whole page -->
-    <div class="backdrop" aria-hidden="true"></div>
-
     <!-- ---------- Nav ---------- -->
     <header class="hud">
         <div class="hud__inner">
@@ -62,39 +59,42 @@
     </header>
 
     <!-- ---------- Hero ---------- -->
+    <!-- The painted G1 backdrop sits behind the hero only and fades into the page below -->
     <section id="top" class="hero">
-        <div class="hero__content">
-            <p class="hero__badge" data-intro><span class="hero__badge-dot"></span>Seeking a Winter 2028 co-op</p>
-            <h1 class="chrome-title" data-intro>Kelvin Liu</h1>
-            <p class="tag" data-intro>Software Developer &middot; Computer Science Co-op, York University</p>
-            <p class="hero__lead" data-intro>I build interactive web apps with React and TypeScript. Building my own gaming PC made me curious about the software side, and now that's what I build.</p>
-            <div class="hero__actions" data-intro>
-                <a class="btn btn--primary" href="#projects">View my work</a>
-                <a class="btn btn--ghost" href="#contact">Contact me</a>
+        <div class="hero__inner">
+            <div class="hero__content">
+                <p class="hero__badge" data-intro><span class="hero__badge-dot"></span>Seeking a Winter 2028 co-op</p>
+                <h1 class="chrome-title" data-intro>Kelvin Liu</h1>
+                <p class="hero__role" data-intro>Software Developer &middot; Computer Science Co-op, York University</p>
+                <p class="hero__lead" data-intro>I build interactive web apps with React and TypeScript. Building my own gaming PC made me curious about the software side, and now that's what I build.</p>
+                <div class="hero__actions" data-intro>
+                    <a class="btn btn--primary" href="#projects">View my work</a>
+                    <a class="btn btn--ghost" href="#contact">Contact me</a>
+                </div>
+                <ul class="hero__links" data-intro>
+                    <li><a href="https://github.com/KelvinL2005" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/kelvin-l-a22079233" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="mailto:kliu05@my.yorku.ca">Email</a></li>
+                </ul>
             </div>
-            <ul class="hero__links" data-intro>
-                <li><a href="https://github.com/KelvinL2005" target="_blank" rel="noopener">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/kelvin-l-a22079233" target="_blank" rel="noopener">LinkedIn</a></li>
-                <li><a href="mailto:kliu05@my.yorku.ca">Email</a></li>
-            </ul>
-        </div>
 
-        <!--
-            Hero character. Nested wrappers so each kind of motion has its own element:
-              .char__rig  flips to face the cursor (scaleX)
-              .char__bob  idle floating (y)
-              .char__aim  tilts toward the cursor, around the pivot point
-            The marker spans sit at the pivot and the barrel tip, so JS can read their
-            on-screen positions after every flip and tilt. Point positions live in CSS.
-        -->
-        <div class="hero__robot" aria-hidden="true">
-            <div class="char char--optimus">
-                <div class="char__rig">
-                    <div class="char__bob">
-                        <div class="char__aim">
-                            <img class="char__img" src="assets/img/optimus.webp" alt="" width="753" height="861">
-                            <span class="char__point char__point--pivot"></span>
-                            <span class="char__point char__point--muzzle"></span>
+            <!--
+                Hero character. Nested wrappers so each kind of motion has its own element:
+                  .char__rig  flips to face the cursor (scaleX)
+                  .char__bob  idle floating (y)
+                  .char__aim  tilts toward the cursor, around the pivot point
+                The marker spans sit at the pivot and the barrel tip, so JS can read their
+                on-screen positions after every flip and tilt. Point positions live in CSS.
+            -->
+            <div class="hero__robot" aria-hidden="true">
+                <div class="char char--optimus">
+                    <div class="char__rig">
+                        <div class="char__bob">
+                            <div class="char__aim">
+                                <img class="char__img" src="assets/img/optimus.webp" alt="" width="753" height="861">
+                                <span class="char__point char__point--pivot"></span>
+                                <span class="char__point char__point--muzzle"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -338,7 +338,6 @@
     </main>
 
     <footer class="footer">
-        <div class="divider"></div>
         <p>&copy; 2026 Kelvin Liu &middot; Built from scratch with HTML, CSS, JavaScript and GSAP &middot; <a href="https://github.com/KelvinL2005/KelvinL2005.github.io" target="_blank" rel="noopener">View source</a></p>
     </footer>
 </body>

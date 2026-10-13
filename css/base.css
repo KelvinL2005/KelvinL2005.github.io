@@ -1,27 +1,24 @@
 /* ---------- G1 Palette ---------- */
 :root {
     --bg: #0b0f1a;
-    --panel: #131a2b;
-    --panel-2: #1a2440;
-    --text: #e2e8f2;
-    --muted: #a3afc4;
+    --surface: #111827;
+    --surface-hover: #151e30;
+    --line: #232c3f;
+    --text: #d6dce8;
+    --heading: #ffffff;
+    --muted: #8f9bb3;
     --red: #d3161f;
-    --red-dark: #a10f16;
     --red-bright: #ff3b3b;
-    --blue: #1f57c9;
-    --blue-dark: #16409a;
-    --blue-bright: #62a0ff;
     --gold: #ffc21a;
     --chrome-hi: #ffffff;
     --chrome-mid: #b9c2d3;
     --chrome-lo: #5c667a;
-    --border: #2a3654;
-    /* Russo One is the G1 display face, used for the name and section titles only.
+    /* Russo One is the G1 display face, used for the name only.
        Everything people actually read is in Inter, which stays clear at small sizes. */
     --font-head: "Russo One", "Arial Black", Impact, sans-serif;
     --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    --font-mono: ui-monospace, "Cascadia Code", Consolas, monospace;
-    --container: 1100px;
+    --radius: 12px;
+    --container: 1040px;
     --gutter: clamp(1rem, 4vw, 2rem);
     --hud-h: 4rem;
 }
@@ -47,26 +44,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ---------- G1 backdrop ----------
-   A fixed layer instead of `background-attachment: fixed`, which mobile Safari
-   ignores and which forces a full repaint on every scroll elsewhere. */
-.backdrop {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    background: url("../assets/img/backdrop-autobot.webp") 30% center / cover;
-}
-
-/* Darken the art so text stays readable: heaviest on the left, where the hero text is */
-.backdrop::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(90deg, rgba(11, 15, 26, 0.9) 0%, rgba(11, 15, 26, 0.6) 55%, rgba(11, 15, 26, 0.35) 100%),
-        linear-gradient(transparent 55%, rgba(11, 15, 26, 0.7));
-}
-
 img,
 svg {
     display: block;
@@ -87,16 +64,20 @@ strong {
     color: #ffffff;
 }
 
+/* One accent colour: links are white with a red underline */
 a {
-    color: var(--blue-bright);
+    color: var(--heading);
+    text-decoration-color: var(--red);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
 }
 
 a:hover {
-    color: var(--gold);
+    color: var(--red-bright);
 }
 
 :focus-visible {
-    outline: 2px solid var(--gold);
+    outline: 2px solid var(--red-bright);
     outline-offset: 3px;
 }
 
@@ -126,12 +107,6 @@ a:hover {
 
 .skip-link:focus {
     top: 1rem;
-}
-
-/* Red | gold | blue stripe */
-.divider {
-    height: 4px;
-    background: linear-gradient(90deg, var(--red) 0 33%, var(--gold) 33% 40%, var(--blue) 40% 100%);
 }
 
 /* Respect reduced-motion settings */

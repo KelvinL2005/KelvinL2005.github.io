@@ -571,6 +571,30 @@
     background: var(--gold);
 }
 
+/* The personal "why I built it" story at the top of a project card */
+.card__spark {
+    margin: 0.5rem 0 1.1rem;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 194, 26, 0.07);
+    border-left: 3px solid var(--gold);
+}
+
+.card__spark p {
+    margin: 0;
+    font-style: italic;
+    color: var(--text);
+}
+
+.card__spark .card__spark-label {
+    margin-bottom: 0.3rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-style: normal;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+}
+
 .card__summary {
     font-size: 1.02rem;
     color: #ffffff;

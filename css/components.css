@@ -668,7 +668,8 @@
 /* ---------- Beyond the Code ---------- */
 .hobbies {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* One wide story on top, then the three short cards side by side */
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.2rem;
 }
 
@@ -691,6 +692,26 @@
 
 .hobby p {
     margin: 0;
+}
+
+/* The Transformers story is the longest and explains the theme, so it gets the full width */
+.hobby--feature {
+    grid-column: 1 / -1;
+}
+
+.hobby--feature p + p,
+.hobby__quote + p {
+    margin-top: 0.75rem;
+}
+
+.hobby__quote {
+    margin: 0.9rem 0 0;
+    padding: 0.6rem 1rem;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #ffffff;
+    background: rgba(255, 194, 26, 0.07);
+    border-left: 3px solid var(--gold);
 }
 
 /* ---------- Contact ---------- */

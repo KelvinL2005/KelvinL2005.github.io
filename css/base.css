@@ -1,32 +1,10 @@
-/* ---------- Faction colours ----------
-   Normally a CSS variable is just text, so the browser can't animate it and it
-   snaps from one value to the next. @property tells the browser it holds a
-   colour, which lets `transition` fade smoothly between red and purple. */
-@property --faction {
-    syntax: "<color>";
-    inherits: true;
-    initial-value: #d3161f;
-}
-
-@property --faction-dark {
-    syntax: "<color>";
-    inherits: true;
-    initial-value: #a10f16;
-}
-
-@property --faction-bright {
-    syntax: "<color>";
-    inherits: true;
-    initial-value: #ff3b3b;
-}
-
 /* ---------- G1 Palette ---------- */
 :root {
     --bg: #0b0f1a;
     --panel: #131a2b;
     --panel-2: #1a2440;
     --text: #e2e8f2;
-    --muted: #93a0b8;
+    --muted: #a3afc4;
     --red: #d3161f;
     --red-dark: #a10f16;
     --red-bright: #ff3b3b;
@@ -38,24 +16,14 @@
     --chrome-mid: #b9c2d3;
     --chrome-lo: #5c667a;
     --border: #2a3654;
+    /* Russo One is the G1 display face, used for the name and section titles only.
+       Everything people actually read is in Inter, which stays clear at small sizes. */
     --font-head: "Russo One", "Arial Black", Impact, sans-serif;
-    --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-mono: ui-monospace, "Cascadia Code", Consolas, monospace;
     --container: 1100px;
     --gutter: clamp(1rem, 4vw, 2rem);
     --hud-h: 4rem;
-
-    /* UI accents use these, so one switch recolours the whole page */
-    --faction: var(--red);
-    --faction-dark: var(--red-dark);
-    --faction-bright: var(--red-bright);
-    transition: --faction 0.6s, --faction-dark 0.6s, --faction-bright 0.6s;
-}
-
-/* Set by js/transition.js on <html> when the Decepticon symbol is showing */
-:root[data-faction="decepticon"] {
-    --faction: #7a2fc0;
-    --faction-dark: #4b1978;
-    --faction-bright: #b070ff;
 }
 
 *,
@@ -74,6 +42,7 @@ body {
     background: var(--bg);
     color: var(--text);
     font-family: var(--font-body);
+    font-size: 1rem;
     line-height: 1.65;
     overflow-x: hidden;
 }
@@ -85,28 +54,7 @@ body {
     position: fixed;
     inset: 0;
     z-index: -1;
-}
-
-.backdrop__layer {
-    position: absolute;
-    inset: 0;
-    background-position: 30% center;
-    background-size: cover;
-    transition: opacity 0.8s;
-}
-
-.backdrop__layer--autobot {
-    background-image: url("../assets/img/backdrop-autobot.webp");
-}
-
-.backdrop__layer--decepticon {
-    background-image: url("../assets/img/backdrop-decepticon.webp");
-    background-position: left center;
-    opacity: 0;
-}
-
-[data-faction="decepticon"] .backdrop__layer--decepticon {
-    opacity: 1;
+    background: url("../assets/img/backdrop-autobot.webp") 30% center / cover;
 }
 
 /* Darken the art so text stays readable: heaviest on the left, where the hero text is */
@@ -115,8 +63,8 @@ body {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(90deg, rgba(11, 15, 26, 0.88) 0%, rgba(11, 15, 26, 0.55) 55%, rgba(11, 15, 26, 0.3) 100%),
-        linear-gradient(transparent 60%, rgba(11, 15, 26, 0.6));
+        linear-gradient(90deg, rgba(11, 15, 26, 0.9) 0%, rgba(11, 15, 26, 0.6) 55%, rgba(11, 15, 26, 0.35) 100%),
+        linear-gradient(transparent 55%, rgba(11, 15, 26, 0.7));
 }
 
 img,
@@ -128,9 +76,7 @@ svg {
 h1,
 h2,
 h3 {
-    font-family: var(--font-head);
-    font-weight: 400;
-    line-height: 1.15;
+    line-height: 1.2;
 }
 
 p {
@@ -185,7 +131,7 @@ a:hover {
 /* Red | gold | blue stripe */
 .divider {
     height: 4px;
-    background: linear-gradient(90deg, var(--faction) 0 33%, var(--gold) 33% 40%, var(--blue) 40% 100%);
+    background: linear-gradient(90deg, var(--red) 0 33%, var(--gold) 33% 40%, var(--blue) 40% 100%);
 }
 
 /* Respect reduced-motion settings */

@@ -668,8 +668,8 @@
 /* ---------- Beyond the Code ---------- */
 .hobbies {
     display: grid;
-    /* One wide story on top, then the three short cards side by side */
-    grid-template-columns: repeat(3, 1fr);
+    /* The longer stories span the full width; the short cards sit side by side */
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
 }
 

@@ -20,30 +20,5 @@ document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") setMenu(false);
 });
 
-// Highlight the nav link for the section currently on screen
-const links = [...menu.querySelectorAll("a")];
-const sections = links
-    .map((link) => document.querySelector(link.getAttribute("href")))
-    .filter(Boolean);
-
-const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
-            links.forEach((link) => {
-                const active = link.getAttribute("href") === `#${entry.target.id}`;
-                link.classList.toggle("is-active", active);
-                if (active) link.setAttribute("aria-current", "true");
-                else link.removeAttribute("aria-current");
-            });
-        });
-    },
-    // A section counts as active when it crosses the middle band of the screen
-    { rootMargin: "-45% 0px -50% 0px" }
-);
-
-sections.forEach((section) => observer.observe(section));
-
-// Watch the hero too: no nav link points at it, so scrolling back up clears the highlight
-const hero = document.getElementById("top");
-if (hero) observer.observe(hero);
+// The current page's nav link is marked in the HTML with aria-current="page",
+// so it works even without JavaScript.

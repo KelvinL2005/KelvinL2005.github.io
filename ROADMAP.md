@@ -13,7 +13,7 @@ Rules that apply everywhere:
 ---
 
 ## Done
-- [x] Layout: fixed nav with a mobile menu, hero, About, Journey, Projects, Skills, Contact.
+- [x] Layout: fixed nav with a mobile menu, shared across four pages.
 - [x] Content from the 2026 résumé: education, experience, project details, skills and coursework.
 - [x] **Journey timeline:** Counter-Strike 1.6 → first PC → Sansotei → first Java program → York Lassonde → web projects → next co-op.
 - [x] Projects as short case studies: what it is, "The spark" (why I built it), key points, stack, code link.
@@ -25,6 +25,18 @@ Rules that apply everywhere:
 - [x] Typography: Russo One (chrome) for the name only, Inter for everything else.
 - [x] Minimal visual pass: Ark backdrop behind the hero only, plain headings with a red bar, rounded cards with thin borders, red as the single accent.
 - [x] Removed the Decepticon faction swap, transition bumper, reticle and blaster fire.
+
+## Co-op course checklist
+- [x] Multi-page site (Home, About Me, Career, Projects) with one shared theme, fonts and colours.
+- [x] Clear menu with descriptive labels; the current page is marked.
+- [x] Footer on every page: name, professional email, date last updated. **Update the date on every change.**
+- [x] Every internal link and anchor tested automatically; external links listed for a manual click.
+- [x] About Me: 3–5 sentence bio, program and expected graduation (April 2029), career goals, LinkedIn link.
+- [ ] About Me: Why Me video (needs the link).
+- [x] Career: education with expected graduation and training; experience with responsibilities, skills used and a result.
+- [ ] Career: more roles if any (volunteer, other paid work).
+- [ ] Career: résumé PDF (needs the file).
+- [ ] Tags: 1–3 Lassonde competencies plus a caption on every artifact (needs the competency list).
 
 ## Next
 - [ ] Project screenshots or short GIFs for Pokemon Team Analyzer and VisualOS.

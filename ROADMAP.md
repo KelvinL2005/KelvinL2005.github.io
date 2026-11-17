@@ -36,7 +36,7 @@ Rules that apply everywhere:
 - [x] Career: education with expected graduation and training; experience with responsibilities, skills used and a result.
 - [ ] Career: more roles if any (volunteer, other paid work).
 - [ ] Career: résumé PDF (needs the file).
-- [ ] Tags: 1–3 Lassonde competencies plus a caption on every artifact (needs the competency list).
+- [x] Tags: 1–3 Lassonde competencies plus a caption on the Why Me video, all four projects and the PC build.
 
 ## Next
 - [ ] Project screenshots or short GIFs for Pokemon Team Analyzer and VisualOS.

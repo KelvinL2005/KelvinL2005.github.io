@@ -556,6 +556,23 @@
     border-radius: 10px;
 }
 
+.card .competencies {
+    margin: 0 0 1.25rem;
+}
+
+.hobby .competencies {
+    margin-top: 1rem;
+}
+
+/* A section that only holds an intro line sits closer to the content below */
+.section--tight {
+    padding-top: 3rem;
+}
+
+.section--tight .section__intro {
+    margin: 0;
+}
+
 .competencies__label {
     margin: 0 0 0.5rem;
     font-size: 0.75rem;

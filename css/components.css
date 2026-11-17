@@ -60,7 +60,7 @@
 
 .hud__menu a:hover,
 .hud__menu a:focus-visible,
-.hud__menu a.is-active {
+.hud__menu a[aria-current="page"] {
     color: var(--heading);
     background: var(--surface);
 }
@@ -236,6 +236,33 @@
     color: var(--heading);
 }
 
+/* ---------- Inner page header ----------
+   A short band of the same backdrop and chrome lettering as the home hero,
+   so every page opens the same way. */
+.page-head {
+    background:
+        linear-gradient(transparent 40%, var(--bg)),
+        linear-gradient(90deg, rgba(11, 15, 26, 0.92) 0%, rgba(11, 15, 26, 0.7) 60%, rgba(11, 15, 26, 0.5) 100%),
+        url("../assets/img/backdrop-autobot.webp") 30% 40% / cover;
+}
+
+.page-head__inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: calc(var(--hud-h) + 3.5rem) var(--gutter) 2.5rem;
+}
+
+.page-head__title {
+    font-size: clamp(2.2rem, 7vw, 3.75rem);
+}
+
+.page-head__intro {
+    max-width: 36rem;
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
 /* ---------- Hero character ---------- */
 .hero__robot {
     justify-self: center;
@@ -398,6 +425,247 @@
     color: var(--heading);
 }
 
+/* Plain reading text inside a panel */
+.prose p {
+    max-width: 46rem;
+    font-size: 1.05rem;
+}
+
+.prose p:last-child {
+    margin-bottom: 0;
+}
+
+.about__text .btn {
+    margin-top: 1.25rem;
+}
+
+/* ---------- Home: explore cards ---------- */
+.explore {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.explore__card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    color: var(--text);
+    text-decoration: none;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.explore__card:hover {
+    color: var(--text);
+    background: var(--surface-hover);
+    border-color: var(--red);
+}
+
+.explore__card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+    color: var(--heading);
+}
+
+.explore__card p {
+    flex: 1;
+}
+
+.explore__go {
+    font-weight: 600;
+    color: var(--red-bright);
+}
+
+/* ---------- Career: education and experience entries ---------- */
+.entry + .entry {
+    margin-top: 1.25rem;
+}
+
+.entry__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.25rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.entry__title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--heading);
+}
+
+.entry__org {
+    margin: 0.2rem 0 0;
+    color: var(--muted);
+}
+
+.entry__when {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--muted);
+    white-space: nowrap;
+}
+
+.entry__label {
+    margin: 1.1rem 0 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red-bright);
+}
+
+.entry__list {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.entry__list li {
+    margin-bottom: 0.35rem;
+}
+
+.entry__list li::marker {
+    color: var(--muted);
+}
+
+.entry .chips {
+    margin: 0;
+}
+
+.entry__result {
+    margin: 0;
+    padding-left: 1rem;
+    color: var(--heading);
+    border-left: 2px solid var(--red);
+}
+
+/* ---------- Artifacts: competency tags with a caption ----------
+   Every artifact (video, project) lists the Lassonde competencies it shows,
+   plus a short caption explaining why. */
+.competencies {
+    margin-top: 1.25rem;
+    padding: 1rem 1.1rem;
+    background: rgba(211, 22, 31, 0.06);
+    border: 1px solid rgba(211, 22, 31, 0.3);
+    border-radius: 10px;
+}
+
+.card .competencies {
+    margin: 0 0 1.25rem;
+}
+
+.hobby .competencies {
+    margin-top: 1rem;
+}
+
+/* A section that only holds an intro line sits closer to the content below */
+.section--tight {
+    padding-top: 3rem;
+}
+
+.section--tight .section__intro {
+    margin: 0;
+}
+
+.competencies__label {
+    margin: 0 0 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red-bright);
+}
+
+.competencies__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0 0 0.6rem;
+    padding: 0;
+    list-style: none;
+}
+
+.competencies__tags li {
+    padding: 0.2rem 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--heading);
+    background: var(--red);
+    border-radius: 999px;
+}
+
+.competencies__caption {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ---------- Video and résumé ---------- */
+.video {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #000000;
+    border-radius: 10px;
+}
+
+.artifact__intro {
+    color: var(--muted);
+}
+
+.video iframe,
+.video video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Shown until the real file or link is added */
+.video--pending,
+.resume__pending {
+    /* No 16:9 shape until there's a real video, or the minimum height forces it wider than a phone */
+    aspect-ratio: auto;
+    display: grid;
+    place-items: center;
+    min-height: 12rem;
+    color: var(--muted);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px dashed var(--line);
+    border-radius: 10px;
+}
+
+.video--pending p,
+.resume__pending p {
+    margin: 0;
+}
+
+.resume__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.resume__fallback {
+    padding: 1.5rem;
+    color: var(--muted);
+}
+
+.resume__frame {
+    width: 100%;
+    height: min(80vh, 1000px);
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
 /* ---------- Journey timeline ---------- */
 .timeline {
     position: relative;
@@ -495,6 +763,18 @@
 .card:hover {
     background: var(--surface-hover);
     border-color: #36425c;
+}
+
+/* Screenshot at the top of a project card, bleeding to the card's edges */
+.card__media {
+    width: calc(100% + 3.2rem);
+    max-width: none;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin: -1.6rem -1.6rem 1.25rem;
+    object-fit: cover;
+    border-bottom: 1px solid var(--line);
+    border-radius: var(--radius) var(--radius) 0 0;
 }
 
 .card__head {
@@ -650,6 +930,42 @@
     margin-top: 0.75rem;
 }
 
+/* Story on the left, photos on the right */
+.hobby--with-media {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 1.75rem;
+    align-items: start;
+}
+
+.hobby__media {
+    margin: 0;
+}
+
+.hobby__media img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hobby__media--pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+}
+
+.hobby__media--pair img {
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+.hobby__media figcaption {
+    grid-column: 1 / -1;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
 .hobby__quote {
     margin: 1rem 0 0;
     padding-left: 1rem;
@@ -689,20 +1005,42 @@
 
 /* ---------- Footer ---------- */
 .footer {
-    max-width: var(--container);
-    margin: 5rem auto 0;
-    padding: 1.5rem var(--gutter) 2.5rem;
-    color: var(--muted);
-    font-size: 0.85rem;
+    margin-top: 5rem;
     border-top: 1px solid var(--line);
 }
 
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 2rem var(--gutter) 2.5rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
 .footer p {
+    margin: 0 0 0.25rem;
+}
+
+.footer__name {
+    font-weight: 700;
+    color: var(--heading);
+}
+
+.footer__links {
+    display: flex;
+    gap: 1.25rem;
     margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .footer a {
-    color: var(--muted);
+    color: var(--text);
 }
 
 /* ---------- Tablet ---------- */
@@ -720,12 +1058,17 @@
     .about,
     .projects,
     .skills,
-    .hobbies {
+    .hobbies,
+    .explore {
         grid-template-columns: 1fr;
     }
 
     .about {
         gap: 1.75rem;
+    }
+
+    .hobby--with-media {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -773,5 +1116,10 @@
 @media (max-width: 480px) {
     .card {
         padding: 1.3rem 1.1rem;
+    }
+
+    .card__media {
+        width: calc(100% + 2.2rem);
+        margin: -1.3rem -1.1rem 1.1rem;
     }
 }

@@ -1,14 +1,17 @@
-// Entrance animations: the hero assembles on load, sections slide in as you scroll,
+// Entrance animations: the page header assembles on load, sections slide in as you scroll,
 // and the journey timeline draws itself as you read down it.
 (() => {
     const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
     // Everything is visible by default, so with no GSAP or reduced motion we simply stop here
     if (reduceMotion || !window.gsap) return;
 
-    // Hero: each line rises into place one after another (stagger), then the character arrives
-    gsap.timeline({ defaults: { ease: "power3.out" } })
-        .from("[data-intro]", { y: 24, opacity: 0, duration: 0.7, stagger: 0.08 })
-        .from(".hero__robot", { x: 60, opacity: 0, duration: 1 }, 0.2);
+    // Page header: each line rises into place one after another (stagger).
+    // On the home page the character then flies in; other pages have no character.
+    const intro = gsap.timeline({ defaults: { ease: "power3.out" } })
+        .from("[data-intro]", { y: 24, opacity: 0, duration: 0.7, stagger: 0.08 });
+    if (document.querySelector(".hero__robot")) {
+        intro.from(".hero__robot", { x: 60, opacity: 0, duration: 1 }, 0.2);
+    }
 
     if (!window.ScrollTrigger) return;
     gsap.registerPlugin(ScrollTrigger);

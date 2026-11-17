@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Kelvin Liu</title>
+    <meta name="description" content="Projects by Kelvin Liu: Pokemon Team Analyzer, VisualOS, Grease Trap and Three Card Poker, each with the story behind it.">
+    <meta name="theme-color" content="#0b0f1a">
+
+    <meta property="og:title" content="Projects | Kelvin Liu">
+    <meta property="og:description" content="Projects by Kelvin Liu: Pokemon Team Analyzer, VisualOS, Grease Trap and Three Card Poker, each with the story behind it.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kelvinl2005.github.io/">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/optimus_primeFavicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <!-- Lets CSS know JS is available so it can enhance the nav and animations -->
+    <script>document.documentElement.classList.add("js");</script>
+    <!-- "defer" scripts run in order after the HTML is parsed, so GSAP is ready before ours -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/reveal.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ---------- Nav (same on every page) ---------- -->
+    <header class="hud">
+        <div class="hud__inner">
+            <a class="hud__brand" href="index.html">
+                <img src="assets/img/autobot.png" alt="" width="40" height="40">
+                <span>Kelvin Liu</span>
+            </a>
+
+            <button class="hud__toggle" type="button" aria-expanded="false" aria-controls="hud-menu">
+                <span class="hud__toggle-bar"></span>
+                <span class="visually-hidden">Menu</span>
+            </button>
+
+            <nav id="hud-menu" class="hud__menu" aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="career.html">Career</a></li>
+                    <li><a href="projects.html" aria-current="page">Projects</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ---------- Page header ---------- -->
+    <section class="page-head">
+        <div class="page-head__inner">
+            <h1 class="chrome-title page-head__title" data-intro>Projects</h1>
+            <p class="page-head__intro" data-intro>What I've built, why I built it, and what each project taught me.</p>
+        </div>
+    </section>
+
+    <main id="main">
+        <section class="section section--tight">
+            <p class="section__intro" data-reveal>Each project is tagged with the Lassonde undergraduate competencies it demonstrates, with a short note on why.</p>
+        </section>
+        <!-- ---------- Projects ---------- -->
+        <!-- Each card: title, what it is (summary), why I built it (spark), how (points) -->
+        <section id="projects" class="section">
+                        <div class="projects">
+                <article class="card" id="pokemon-team-analyzer" data-reveal>
+                    <img class="card__media" src="assets/img/pokemon-team-analyzer.webp" alt="Pokemon Team Analyzer: a team builder panel for Groudon with ability, item, nature and EV settings, a Corviknight stat card, and the six-Pokemon party below." width="976" height="549" loading="lazy">
+                    <div class="card__head">
+                        <h3 class="card__title">Pokemon Team Analyzer</h3>
+                        <p class="card__meta"><span class="status">In progress</span> May 2026 &ndash; Present</p>
+                    </div>
+                    <p class="card__summary">A full-stack team builder that finds a team's weaknesses and suggests fixes.</p>
+                    <blockquote class="card__spark">
+                        <p class="card__spark-label">The spark</p>
+                        <p>I've been a Pokemon fan for as long as I can remember, and every playthrough came down to the same puzzle: six party slots, hundreds of choices, and one bad type matchup could sink the whole team. I wanted a tool that would spot those weak points before an opponent did, so I started building one that maps out a team's type coverage and uses AI to suggest how to make it stronger.</p>
+                    </blockquote>
+                    <ul class="card__points">
+                        <li>React and TypeScript frontend that pulls structured data from the PokeAPI and surfaces team composition and type coverage.</li>
+                        <li>Node and Express backend that validates and transforms data before it reaches the client, with a relational schema planned for user accounts and saved teams.</li>
+                        <li>Exploring an LLM API to generate team recommendations, to learn how AI fits into a real application architecture.</li>
+                    </ul>
+                    <ul class="chips" aria-label="Tech stack">
+                        <li>React</li><li>TypeScript</li><li>Node.js</li><li>Express</li><li>PokeAPI</li>
+                    </ul>
+                    <div class="competencies">
+                        <p class="competencies__label">Lassonde competencies</p>
+                        <ul class="competencies__tags"><li>Critical thinking and problem-solving skills</li><li>Accessing and Analyzing Information Skills</li><li>Curiosity and Imagination Skills</li></ul>
+                        <p class="competencies__caption">I turned a problem from my own playthroughs into a tool: it pulls structured data from the PokeAPI and analyzes type matchups to find a team's weak points, and I'm exploring how AI can suggest fixes.</p>
+                    </div>
+                    <div class="card__links">
+                        <a class="btn btn--small" href="https://github.com/KelvinL2005/pokemon-team-analyzer" target="_blank" rel="noopener">View code</a>
+                    </div>
+                </article>
+
+                <article class="card" id="visualos" data-reveal>
+                    <div class="card__head">
+                        <h3 class="card__title">VisualOS</h3>
+                        <p class="card__meta"><span class="status">In progress</span> May 2026 &ndash; Present</p>
+                    </div>
+                    <p class="card__summary">An interactive, step-by-step visualizer for algorithms and data structures.</p>
+                    <blockquote class="card__spark">
+                        <p class="card__spark-label">The spark</p>
+                        <p>I've always been a visual learner, and data structures only really clicked for me once I could picture them. I wanted to see the algorithms from my classes in motion, one step at a time. VisualOS became my way to learn by building: to animate each data structure I first had to understand it inside out, and the finished tool lets me explore new algorithms as I go.</p>
+                    </blockquote>
+                    <ul class="card__points">
+                        <li>Modular React and TypeScript component system that renders algorithm state changes in real time across multiple data structures.</li>
+                        <li>Animated state transitions and responsive interactions built with React hooks, running smoothly on desktop and mobile.</li>
+                        <li>Developed iteratively with Git branches and focused commits to keep a clean, reviewable history.</li>
+                    </ul>
+                    <ul class="chips" aria-label="Tech stack">
+                        <li>React</li><li>TypeScript</li><li>JavaScript</li><li>CSS</li>
+                    </ul>
+                    <div class="competencies">
+                        <p class="competencies__label">Lassonde competencies</p>
+                        <ul class="competencies__tags"><li>Curiosity and Imagination Skills</li><li>Critical thinking and problem-solving skills</li><li>Communication Skills</li></ul>
+                        <p class="competencies__caption">As a visual learner, I imagined a way to watch algorithms run step by step. To animate each data structure I first had to understand it inside out, and the finished tool explains those ideas visually to anyone who uses it.</p>
+                    </div>
+                    <div class="card__links">
+                        <a class="btn btn--small" href="https://github.com/KelvinL2005/visualos" target="_blank" rel="noopener">View code</a>
+                    </div>
+                </article>
+
+                <article class="card" id="grease-trap" data-reveal>
+                    <img class="card__media" src="assets/img/grease-trap.webp" alt="Grease Trap title screen: a dim, grimy fast-food kitchen with a burger on the counter, a car waiting at the drive-thru window, and Play, Tutorial and Quit buttons." width="1151" height="645" loading="lazy">
+                    <div class="card__head">
+                        <h3 class="card__title">Grease Trap</h3>
+                        <p class="card__meta"><span class="status status--award">Top 30%</span> Oct 2025</p>
+                    </div>
+                    <p class="card__summary">A drive-thru horror game built by four friends in one week for a Halloween game jam on itch.io.</p>
+                    <blockquote class="card__spark">
+                        <p class="card__spark-label">The spark</p>
+                        <p>This was my first time building and shipping something with a group. My friends and I entered a Halloween-themed game jam on itch.io and built a drive-thru horror game in Godot within a week. I was responsible for the cooking mechanics, and I was learning a game engine for the first time while doing it. We started by diagramming the game's flow, then worked from a shared GitHub repo where each of us merged and tested our changes. The project taught me how much version control matters on a team and how much faster things go when you talk through problems with the people next to you.</p>
+                    </blockquote>
+                    <ul class="card__points">
+                        <li>Built the game's cooking mechanics and shipped a fully playable game in 7 days, placing in the top 30% of 1,000+ game jam submissions.</li>
+                        <li>Learned GDScript and Godot Engine from scratch in the first 24 hours by working through 5+ tutorials, then built the game in the remaining six days.</li>
+                        <li>Coordinated the team's feature pipeline and set up a shared Git workflow (feature branches and merge reviews), which meant zero integration bugs at submission.</li>
+                    </ul>
+                    <ul class="chips" aria-label="Tech stack">
+                        <li>Godot Engine</li><li>GDScript</li><li>Git</li>
+                    </ul>
+                    <div class="competencies">
+                        <p class="competencies__label">Lassonde competencies</p>
+                        <ul class="competencies__tags"><li>Collaboration and Leadership Skills</li><li>Agility and Adaptability Skills</li><li>Communication Skills</li></ul>
+                        <p class="competencies__caption">Four friends, one week: I learned Godot from scratch in a day, owned the cooking mechanics, and coordinated our feature pipeline and Git workflow. Talking problems through as a team is how we shipped on time and placed in the top 30% of 1,000+ entries.</p>
+                    </div>
+                    <div class="card__links">
+                        <a class="btn btn--small btn--primary" href="https://doomfishy.itch.io/grease-trap" target="_blank" rel="noopener">Play on itch.io</a>
+                    </div>
+                </article>
+
+                <article class="card" id="three-card-poker" data-reveal>
+                    <div class="card__head">
+                        <h3 class="card__title">Three Card Poker Variation</h3>
+                        <p class="card__meta">May &ndash; Jun 2023</p>
+                    </div>
+                    <p class="card__summary">A Java card game with a full gameplay loop, from betting to hand resolution.</p>
+                    <blockquote class="card__spark">
+                        <p class="card__spark-label">The spark</p>
+                        <p>I built this in high school while learning Java, to show my computer science class how each core OOP concept could come together in a game everyone knows. Poker sounds simple on paper, but programming it is full of edge cases, like hands where the same cards could count as more than one ranking. Working through them taught me that the real challenge in programming isn't the obvious path, it's everything around it.</p>
+                    </blockquote>
+                    <ul class="card__points">
+                        <li>Hand evaluation for all 10 poker rankings using an enum-based ranking system, checked in priority order so a straight flush is never misread as a straight or a flush.</li>
+                        <li>Game logic, models and the Swing UI kept as independent components.</li>
+                    </ul>
+                    <ul class="chips" aria-label="Tech stack">
+                        <li>Java</li><li>Swing</li><li>OOP</li>
+                    </ul>
+                    <div class="competencies">
+                        <p class="competencies__label">Lassonde competencies</p>
+                        <ul class="competencies__tags"><li>Critical thinking and problem-solving skills</li><li>Communication Skills</li></ul>
+                        <p class="competencies__caption">Evaluating all 10 hand rankings meant working through edge cases where the same cards could fit more than one ranking, and I built the game to teach my computer science class how core OOP concepts fit together.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- ---------- Footer (same on every page) ---------- -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div>
+                <p class="footer__name">Kelvin Liu</p>
+                <p><a href="mailto:kliu05@my.yorku.ca">kliu05@my.yorku.ca</a></p>
+                <p>Last updated: <time datetime="2026-11-17">November 17, 2026</time></p>
+            </div>
+            <ul class="footer__links">
+                <li><a href="https://www.linkedin.com/in/kelvin-l-a22079233" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com/KelvinL2005" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://github.com/KelvinL2005/KelvinL2005.github.io" target="_blank" rel="noopener">Site source</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

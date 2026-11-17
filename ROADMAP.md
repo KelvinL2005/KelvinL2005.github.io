@@ -34,8 +34,8 @@ Rules that apply everywhere:
 - [x] About Me: 3–5 sentence bio, program and expected graduation (December 2028), career goals, LinkedIn link.
 - [x] About Me: Why Me video, self-hosted with captions (`assets/video/`).
 - [x] Career: education with expected graduation and training; experience with responsibilities, skills used and a result.
-- [ ] Career: more roles if any (volunteer, other paid work).
-- [ ] Career: résumé PDF (needs the file).
+- [x] Career: IT Service Desk Analyst (Town of Aurora, co-op) and Sansotei, each with responsibilities, skills, a result and competency tags.
+- [x] Career: résumé PDF embedded with Download and Open buttons (`assets/docs/`).
 - [x] Tags: 1–3 Lassonde competencies plus a caption on the Why Me video, all four projects and the PC build.
 
 ## Next

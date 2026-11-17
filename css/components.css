@@ -597,6 +597,10 @@
     border-radius: 10px;
 }
 
+.artifact__intro {
+    color: var(--muted);
+}
+
 .video iframe,
 .video video {
     position: absolute;

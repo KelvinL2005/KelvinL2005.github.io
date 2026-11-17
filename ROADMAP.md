@@ -32,7 +32,7 @@ Rules that apply everywhere:
 - [x] Footer on every page: name, professional email, date last updated. **Update the date on every change.**
 - [x] Every internal link and anchor tested automatically; external links listed for a manual click.
 - [x] About Me: 3–5 sentence bio, program and expected graduation (April 2029), career goals, LinkedIn link.
-- [ ] About Me: Why Me video (needs the link).
+- [x] About Me: Why Me video, self-hosted with captions (`assets/video/`).
 - [x] Career: education with expected graduation and training; experience with responsibilities, skills used and a result.
 - [ ] Career: more roles if any (volunteer, other paid work).
 - [ ] Career: résumé PDF (needs the file).

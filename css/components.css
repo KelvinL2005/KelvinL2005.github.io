@@ -765,16 +765,22 @@
     border-color: #36425c;
 }
 
-/* Screenshot at the top of a project card, bleeding to the card's edges */
+/* Screenshot at the top of a project card, bleeding to the card's edges.
+   The frame is a block of its own and the image keeps its natural shape inside it,
+   so it is never stretched or cropped whatever the card's width. */
 .card__media {
-    width: calc(100% + 3.2rem);
-    max-width: none;
-    height: auto;
-    aspect-ratio: 16 / 9;
+    flex-shrink: 0;
     margin: -1.6rem -1.6rem 1.25rem;
-    object-fit: cover;
+    overflow: hidden;
+    background: #ffffff;
     border-bottom: 1px solid var(--line);
     border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.card__media img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .card__head {
@@ -1119,7 +1125,6 @@
     }
 
     .card__media {
-        width: calc(100% + 2.2rem);
         margin: -1.3rem -1.1rem 1.1rem;
     }
 }

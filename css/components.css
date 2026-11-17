@@ -739,6 +739,18 @@
     border-color: #36425c;
 }
 
+/* Screenshot at the top of a project card, bleeding to the card's edges */
+.card__media {
+    width: calc(100% + 3.2rem);
+    max-width: none;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin: -1.6rem -1.6rem 1.25rem;
+    object-fit: cover;
+    border-bottom: 1px solid var(--line);
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
 .card__head {
     display: flex;
     flex-wrap: wrap;
@@ -892,6 +904,42 @@
     margin-top: 0.75rem;
 }
 
+/* Story on the left, photos on the right */
+.hobby--with-media {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 1.75rem;
+    align-items: start;
+}
+
+.hobby__media {
+    margin: 0;
+}
+
+.hobby__media img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hobby__media--pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+}
+
+.hobby__media--pair img {
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+.hobby__media figcaption {
+    grid-column: 1 / -1;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
 .hobby__quote {
     margin: 1rem 0 0;
     padding-left: 1rem;
@@ -992,6 +1040,10 @@
     .about {
         gap: 1.75rem;
     }
+
+    .hobby--with-media {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ---------- Mobile nav (collapses only when JS can open it again) ---------- */
@@ -1038,5 +1090,10 @@
 @media (max-width: 480px) {
     .card {
         padding: 1.3rem 1.1rem;
+    }
+
+    .card__media {
+        width: calc(100% + 2.2rem);
+        margin: -1.3rem -1.1rem 1.1rem;
     }
 }

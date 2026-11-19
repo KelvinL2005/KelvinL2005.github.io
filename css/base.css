@@ -13,10 +13,9 @@
     --chrome-hi: #ffffff;
     --chrome-mid: #b9c2d3;
     --chrome-lo: #5c667a;
-    /* Russo One is the G1 display face, used for the name only.
-       Everything people actually read is in Inter, which stays clear at small sizes. */
-    --font-head: "Russo One", "Arial Black", Impact, sans-serif;
-    --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-head: "Chakra Petch", "Arial Black", sans-serif;
+    --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
     --radius: 12px;
     --container: 1040px;
     --gutter: clamp(1rem, 4vw, 2rem);

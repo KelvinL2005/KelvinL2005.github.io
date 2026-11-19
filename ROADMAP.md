@@ -31,7 +31,7 @@ Rules that apply everywhere:
 - [x] Clear menu with descriptive labels; the current page is marked.
 - [x] Footer on every page: name, professional email, date last updated. **Update the date on every change.**
 - [x] Every internal link and anchor tested automatically; external links listed for a manual click.
-- [x] About Me: 3–5 sentence bio, program and expected graduation (April 2029), career goals, LinkedIn link.
+- [x] About Me: 3–5 sentence bio, program and expected graduation (2028–2029), career goals, LinkedIn link.
 - [x] About Me: Why Me video, self-hosted with captions (`assets/video/`).
 - [x] Career: education with expected graduation and training; experience with responsibilities, skills used and a result.
 - [x] Career: IT Service Desk Analyst (Town of Aurora, co-op) and Sansotei, each with responsibilities, skills, a result and competency tags.

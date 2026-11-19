@@ -865,6 +865,12 @@
     margin-top: auto;
 }
 
+/* "Up next" card: full width, dashed to show it's still in progress */
+.card--next {
+    grid-column: 1 / -1;
+    border-style: dashed;
+}
+
 /* ---------- Chips ---------- */
 .chips {
     display: flex;

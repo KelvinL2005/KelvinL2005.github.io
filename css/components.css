@@ -439,6 +439,95 @@
     margin-top: 1.25rem;
 }
 
+/* ---------- Home: what I bring ---------- */
+.offer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.offer__item {
+    display: flex;
+    flex-direction: column;
+    border-top: 3px solid var(--red);
+}
+
+.offer__item h3 {
+    margin: 0 0 0.6rem;
+    font-size: 1.15rem;
+    color: var(--heading);
+}
+
+.offer__item p {
+    flex: 1;
+}
+
+.offer__link {
+    font-weight: 600;
+    color: var(--red-bright);
+    text-decoration: none;
+}
+
+/* ---------- Home: featured work ---------- */
+.featured {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 1.25rem;
+}
+
+.featured__card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: var(--text);
+    text-decoration: none;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.featured__card:hover {
+    color: var(--text);
+    background: var(--surface-hover);
+    border-color: var(--red);
+}
+
+.featured__card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid var(--line);
+}
+
+.featured__card--next {
+    justify-content: center;
+    border-style: dashed;
+}
+
+.featured__body {
+    padding: 1.4rem 1.5rem 1.5rem;
+}
+
+.featured__body h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+    color: var(--heading);
+}
+
+.featured__body p:last-child {
+    margin: 0;
+}
+
+.featured__kicker {
+    margin: 0 0 0.3rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red-bright);
+}
+
 /* ---------- Home: explore cards ---------- */
 .explore {
     display: grid;
@@ -510,6 +599,11 @@
     font-size: 0.9rem;
     color: var(--muted);
     white-space: nowrap;
+}
+
+.entry__summary {
+    margin: -0.25rem 0 0.5rem;
+    color: var(--heading);
 }
 
 .entry__label {
@@ -910,6 +1004,10 @@
     color: var(--heading);
 }
 
+.skill-group--wide {
+    grid-column: 1 / -1;
+}
+
 .skill-group .chips {
     margin: 0;
 }
@@ -1071,7 +1169,9 @@
     .projects,
     .skills,
     .hobbies,
-    .explore {
+    .explore,
+    .offer,
+    .featured {
         grid-template-columns: 1fr;
     }
 
